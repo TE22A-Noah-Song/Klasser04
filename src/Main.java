@@ -26,10 +26,27 @@ public class Main {
 
         for (int i = 0; i < totalRocks; i++) {
             System.out.println("Rock " + (i + 1) + ": " + Rocks.get(i).getWeight() + " kg");
-
         }
 
+    Worker worker1 = new Worker("Bob", 31);
+        BlueCollar worker2 = new BlueCollar("Joe", 21);
+    WhiteCollar worker3 = new WhiteCollar("Jane", 44);
 
+        // call setWage to give a random salary to worker
+        worker1.setWage();
+        worker2.setWage();
+        worker3.setWage();
 
+        System.out.println(worker1.getName() + " is " + worker1.getAge() + " years old and earns $" + worker1.getWage());
+        System.out.println(worker2.getName() + " is " + worker2.getAge() + " years old and earns $" + worker2.getWage());
+        System.out.println(worker3.getName() + " is " + worker3.getAge() + " years old and earns $" + worker3.getWage());
+
+        worker2.build();
+        worker2.repair();
+        worker2.destroy();
+
+        worker3.drinkCoffee();
+        worker3.attendMeeting();
+        worker3.doSpreadSheets();
     }
 }
